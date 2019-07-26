@@ -1,5 +1,6 @@
 STOW_SYMLINKS += less
 STOW_SYMLINKS += zsh
+STOW_SYMLINKS += readline
 
 all: $(STOW_SYMLINKS) $(HOME)/.less
 
