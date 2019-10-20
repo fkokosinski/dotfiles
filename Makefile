@@ -1,7 +1,8 @@
-STOW_SYMLINKS += less
-STOW_SYMLINKS += zsh
-STOW_SYMLINKS += readline
 STOW_SYMLINKS += gdb
+STOW_SYMLINKS += i3-gaps
+STOW_SYMLINKS += less
+STOW_SYMLINKS += readline
+STOW_SYMLINKS += zsh
 
 all: $(STOW_SYMLINKS) $(HOME)/.less
 

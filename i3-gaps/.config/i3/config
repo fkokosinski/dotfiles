@@ -1,0 +1,120 @@
+# variables
+set $mod        Mod4
+set $term       st
+set $browser    firefox-bin
+set $manager    st -e "ranger"
+
+# xf86 keys
+bindsym XF86Sleep               exec --no-startup-id slock
+bindsym XF86MonBrightnessDown   exec --no-startup-id xbacklight -set $(echo "$(xbacklight -get) - 5.0" | bc)
+bindsym XF86MonBrightnessUp     exec --no-startup-id xbacklight -set $(echo "$(xbacklight -get) + 5.0" | bc)
+bindsym XF86AudioMute           exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86AudioLowerVolume    exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioRaiseVolume    exec --no-startup-id pactl set-sink-volume 0 +5%
+
+# screenshooting
+bindsym --release Print exec --no-startup-id scrot '%Y-%m-%d-%H%M%S_scrot.png' -s -e 'mv $f ~/Obrazy/'
+
+# app shortcuts
+bindsym $mod+Return exec $term
+bindsym $mod+Shift+Return exec ~/.scripts/i3-shell.sh
+bindsym $mod+b exec $browser
+bindsym $mod+m exec $manager
+
+# kill focused tile
+bindsym $mod+q kill
+
+# start app launcher
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# split in horizontal orientation
+bindsym $mod+z split h
+
+# split in vertical orientation
+bindsym $mod+x split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# floating modifier
+floating_modifier $mod
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+# disable titlebars (required by gaps); set border frame to 3px
+for_window [class="^.*"] border pixel 3
+
+# gaps
+gaps inner 10
+gaps outer 10
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background #ffffff
+
+# autostart
+exec --no-startup-id feh --bg-scale /home/filip/.config/wallpaper.png
+exec --no-startup-id compton
+exec --no-startup-id polybar --config=/home/filip/.config/polybar/polybar.conf top
+exec --no-startup-id polybar --config=/home/filip/.config/polybar/polybar.conf bottom
+exec nm-applet
+exec --no-startup-id redshift-gtk
