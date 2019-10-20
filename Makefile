@@ -3,6 +3,7 @@ STOW_SYMLINKS += i3-gaps
 STOW_SYMLINKS += less
 STOW_SYMLINKS += polybar
 STOW_SYMLINKS += readline
+STOW_SYMLINKS += redshift
 STOW_SYMLINKS += zsh
 
 all: $(STOW_SYMLINKS) $(HOME)/.less
