@@ -3,6 +3,7 @@ STOW_SYMLINKS += i3-gaps
 STOW_SYMLINKS += less
 STOW_SYMLINKS += neovim
 STOW_SYMLINKS += polybar
+STOW_SYMLINKS += ranger
 STOW_SYMLINKS += readline
 STOW_SYMLINKS += redshift
 STOW_SYMLINKS += zsh
