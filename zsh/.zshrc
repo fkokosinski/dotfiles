@@ -42,4 +42,6 @@ bindkey -M vicmd ';' vi-forward-char
 
 bindkey -M viins -s 'jk' '\e'
 
+# aliases
 alias ls='ls --color'
+alias vim='nvim'
