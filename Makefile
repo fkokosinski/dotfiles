@@ -6,6 +6,7 @@ STOW_SYMLINKS += polybar
 STOW_SYMLINKS += ranger
 STOW_SYMLINKS += readline
 STOW_SYMLINKS += redshift
+STOW_SYMLINKS += x11
 STOW_SYMLINKS += zsh
 
 all: $(STOW_SYMLINKS) $(HOME)/.less
