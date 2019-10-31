@@ -42,6 +42,9 @@ bindkey -M vicmd ';' vi-forward-char
 
 bindkey -M viins -s 'jk' '\e'
 
+# allow removing chars before insert point
+bindkey "^?" backward-delete-char
+
 # aliases
 alias ls='ls --color'
 alias vim='nvim'
