@@ -48,3 +48,8 @@ bindkey "^?" backward-delete-char
 # aliases
 alias ls='ls --color'
 alias vim='nvim'
+
+# go to the path pointed by ST_PATH
+if [ ! -z "$ST_PATH" ]; then
+    cd "$ST_PATH"
+fi
