@@ -18,10 +18,10 @@ bindsym XF86AudioRaiseVolume    exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym --release Print exec --no-startup-id scrot '%Y-%m-%d-%H%M%S_scrot.png' -s -e 'mv $f ~/Obrazy/'
 
 # app shortcuts
-bindsym $mod+Return exec $term
-bindsym $mod+Shift+Return exec ~/.scripts/i3-shell.sh
-bindsym $mod+b exec $browser
-bindsym $mod+m exec $manager
+bindsym $mod+Return         exec $term
+bindsym $mod+Shift+Return   exec ~/.scripts/i3-shell.sh
+bindsym $mod+b              exec $browser
+bindsym $mod+m              exec $manager
 
 # kill focused tile
 bindsym $mod+q kill
@@ -111,12 +111,12 @@ client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
-client.background #ffffff
+client.background       #ffffff
 
 # autostart
 exec --no-startup-id feh --bg-scale /home/filip/.config/wallpaper.png
 exec --no-startup-id compton
 exec --no-startup-id polybar --config=/home/filip/.config/polybar/polybar.conf top
 exec --no-startup-id polybar --config=/home/filip/.config/polybar/polybar.conf bottom
-exec nm-applet
+exec                 nm-applet
 exec --no-startup-id redshift-gtk
