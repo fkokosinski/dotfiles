@@ -1,3 +1,5 @@
+# vim: filetype=i3config
+
 # variables
 set $mod        Mod4
 set $term       st
