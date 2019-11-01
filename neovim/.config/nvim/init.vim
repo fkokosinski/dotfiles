@@ -7,6 +7,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'junegunn/vader.vim'
 
+" syntax plugins
+Plugin 'mboughaba/i3config.vim'
+
 call vundle#end()
 
 filetype plugin indent on
