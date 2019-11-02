@@ -116,7 +116,7 @@ client.background       #ffffff
 # autostart
 exec --no-startup-id feh --bg-scale /home/filip/.config/wallpaper.png
 exec --no-startup-id compton
-exec --no-startup-id polybar --config=/home/filip/.config/polybar/polybar.conf top
-exec --no-startup-id polybar --config=/home/filip/.config/polybar/polybar.conf bottom
+exec --no-startup-id polybar top
+exec --no-startup-id polybar bottom
 exec                 nm-applet
 exec --no-startup-id redshift-gtk
