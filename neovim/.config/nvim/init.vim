@@ -1,16 +1,14 @@
-" Vundle initialization
-filetype off
-set rtp+=~/.config/nvim/bundle/Vundle.vim
-call vundle#begin('~/.config/nvim/bundle')
+" vim-plug initialization
+set runtimepath+=~/.config/nvim/bundle/vim-plug
+call plug#begin('~/.config/nvim/bundle')
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'itchyny/lightline.vim'
-Plugin 'junegunn/vader.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'junegunn/vader.vim'
 
 " syntax plugins
-Plugin 'mboughaba/i3config.vim'
+Plug 'mboughaba/i3config.vim'
 
-call vundle#end()
+call plug#end()
 
 filetype plugin indent on
 
