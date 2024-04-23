@@ -1,3 +1,4 @@
+STOW_SYMLINKS += foot
 STOW_SYMLINKS += gdb
 STOW_SYMLINKS += i3-gaps
 STOW_SYMLINKS += less
