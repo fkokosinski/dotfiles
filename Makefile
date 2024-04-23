@@ -7,6 +7,7 @@ STOW_SYMLINKS += ranger
 STOW_SYMLINKS += readline
 STOW_SYMLINKS += redshift
 STOW_SYMLINKS += scripts
+STOW_SYMLINKS += sway
 STOW_SYMLINKS += x11
 STOW_SYMLINKS += zathura
 STOW_SYMLINKS += zsh
