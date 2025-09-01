@@ -1,0 +1,25 @@
+theme = "onedark"
+
+[editor]
+line-number = "relative"
+mouse = false
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[keys.normal]
+j = "move_char_left"
+k = "move_line_down"
+l = "move_line_up"
+";" = "move_char_right"
+
+[keys.select]
+j = "move_char_left"
+k = "move_line_down"
+l = "move_line_up"
+";" = "move_char_right"
