@@ -13,16 +13,16 @@ bindsym $mod+d          exec $menu
 bindsym $mod+q kill
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+Semicolon focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+Semicolon move right
 
 # split in horizontal orientation
 bindsym $mod+z split h
@@ -37,6 +37,7 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
+bindsym $mod+r layout default
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -78,23 +79,26 @@ bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+Shift+c reload
 
 # disable titlebars (required by gaps); set border frame to 3px
-for_window [class="^.*"] border pixel 3
+#for_window [class="^.*"] border pixel 3
 
-# gaps
-gaps inner 10
-gaps outer 10
+# theme
+set $accent	#ebdbb2
+set $red	#cc241d
+set $darkgray	#3c3836
 
-# class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-
+client.focused          $accent $accent $darkgray $accent $accent
+client.focused_inactive $darkgray $darkgray $accent $darkgray $darkgray
+client.unfocused        $darkgray $darkgray $accent $darkgray $darkgray
+client.urgent           $red $red $accent $red $red
 client.background       #ffffff
 
+default_border pixel 2
+default_floating_border pixel 2
+smart_borders on
+gaps inner 10
+
 # Default wallpaper (more resolutions are available in /run/current-system/sw/share/backgrounds/sway/)
-output * bg /run/current-system/sw/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg ~/.config/wallpaper.jpeg fill
 
 
 # input configuration
@@ -123,4 +127,4 @@ bar {
     }
 }
 
-#include /etc/sway/config.d/*
+include /etc/sway/config.d/*
