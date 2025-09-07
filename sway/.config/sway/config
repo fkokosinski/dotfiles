@@ -119,4 +119,6 @@ input type:keyboard {
 #    workspace_buttons yes
 #}
 
+exec swaync
+
 include /etc/sway/config.d/*
