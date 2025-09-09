@@ -4,3 +4,4 @@ command = "ctags-lsp"
 [[language]]
 name = "c"
 language-servers = [ "ctags-lsp" ]
+formatter = { command = "clang-format" }
