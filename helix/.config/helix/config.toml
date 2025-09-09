@@ -28,9 +28,9 @@ j = "goto_line_start"
 ";" = "goto_line_end"
 
 [keys.select]
-j = "move_char_left"
-k = "move_line_down"
-l = "move_line_up"
-";" = "move_char_right"
+j = "extend_char_left"
+k = "extend_line_down"
+l = "extend_line_up"
+";" = "extend_char_right"
 "}" = "goto_next_paragraph"
 "{" = "goto_prev_paragraph"
