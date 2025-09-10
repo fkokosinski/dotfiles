@@ -19,7 +19,9 @@ window#waybar {
 }
 .modules-center {
 	background-color: rgba(0,43,51,0.85);
-    margin: 2px 0 0 0;
+    margin: 2px 0px 0 0;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .modules-left {
     margin: 2px 0 0 5px;

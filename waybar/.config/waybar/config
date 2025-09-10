@@ -1,7 +1,16 @@
 {
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["clock"],
-    "modules-right": ["tray", "custom/scratchpad-indicator", "pulseaudio"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["tray", "custom/scratchpad-indicator", "pulseaudio", "clock"],
+
+    "sway/window": {
+        "format": "{title}",
+    },
+
+    "clock": {
+        "format": " {:%e.%m.%Y   %H.%M}",
+        "on-click": "firefox https://calendar.google.com",
+    },
 
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -23,11 +32,6 @@
     "tray": {
         "icon-size": 15,
         "spacing": 10
-    },
-    "clock": {
-        // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        // "format-alt": "{:%Y-%m-%d}"
-		"on-click": "gnome-calendar"
     },
     "pulseaudio": {
         "format": "{volume}% {icon} ",
