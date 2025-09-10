@@ -100,7 +100,6 @@ gaps inner 10
 # Default wallpaper (more resolutions are available in /run/current-system/sw/share/backgrounds/sway/)
 output * bg ~/.config/wallpaper.jpeg fill
 
-
 # input configuration
 input type:touchpad {
     dwt enabled
@@ -113,11 +112,10 @@ input type:keyboard {
     xkb_layout pl
 }
 
-
-#bar {
-#    swaybar_command waybar
-#    workspace_buttons yes
-#}
+bar {
+    swaybar_command waybar
+    workspace_buttons yes
+}
 
 exec swaync
 
