@@ -9,7 +9,8 @@ set $lock       swaylock
 bindsym $mod+Return     exec $term
 bindsym $mod+b          exec $browser
 bindsym $mod+d          exec $menu
-bindsym $mod+Shift+q   exec $lock
+bindsym $mod+Shift+q    exec $lock
+bindsym Print           exec 'grim -g "$(slurp)" - | wl-copy'
 
 # kill focused tile
 bindsym $mod+q kill
