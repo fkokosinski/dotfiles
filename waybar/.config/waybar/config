@@ -1,67 +1,84 @@
-{
-    "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
-    "modules-right": ["tray", "custom/scratchpad-indicator", "pulseaudio", "clock"],
+[
+    {
+        "modules-left": ["sway/workspaces", "sway/mode"],
+        "modules-center": ["sway/window"],
+        "modules-right": ["tray", "custom/scratchpad-indicator", "pulseaudio", "clock"],
+        "output": ["HDMI-A-1"],
 
-    "sway/window": {
-        "format": "{title}",
-    },
-
-    "clock": {
-        "format": " {:%e.%m.%Y   %H.%M}",
-        "on-click": "firefox https://calendar.google.com",
-    },
-
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "network": {
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ifname} ",
-        "format-disconnected": "", 
-        "max-length": 50,
-        "on-click": "kitty -e 'nmtui'"
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
+        "sway/window": {
+            "format": "{title}",
         },
-    },
-    "tray": {
-        "icon-size": 15,
-        "spacing": 10
-    },
-    "pulseaudio": {
-        "format": "{volume}% {icon} ",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "0% {icon} ",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
+
+        "clock": {
+            "format": " {:%e.%m.%Y   %H.%M}",
+            "on-click": "firefox https://calendar.google.com",
         },
-        "on-click": "pavucontrol"
+
+        "sway/mode": {
+            "format": "<span style=\"italic\">{}</span>"
+        },
+        "network": {
+            "format-wifi": "{essid} ({signalStrength}%) ",
+            "format-ethernet": "{ifname} ",
+            "format-disconnected": "", 
+            "max-length": 50,
+            "on-click": "kitty -e 'nmtui'"
+        },
+        "idle_inhibitor": {
+            "format": "{icon}",
+            "format-icons": {
+                "activated": "",
+                "deactivated": ""
+            },
+        },
+        "tray": {
+            "icon-size": 15,
+            "spacing": 10
+        },
+        "pulseaudio": {
+            "format": "{volume}% {icon} ",
+            "format-bluetooth": "{volume}% {icon} {format_source}",
+            "format-bluetooth-muted": " {icon} {format_source}",
+            "format-muted": "0% {icon} ",
+            "format-source": "{volume}% ",
+            "format-source-muted": "",
+            "format-icons": {
+                "headphone": "",
+                "hands-free": "",
+                "headset": "",
+                "phone": "",
+                "portable": "",
+                "car": "",
+                "default": ["", "", ""]
+            },
+            "on-click": "pavucontrol"
+        },
+    	"custom/power": {
+    		"format": " ",
+    		"on-click": "wlogout"
+    	},
+        "custom/scratchpad-indicator": {
+            "format-text": "{}hi",
+            "return-type": "json",
+            "interval": 3,
+            "exec": "~/.local/bin/scratchpad-indicator 2> /dev/null",
+            "exec-if": "exit 0",
+            "on-click": "swaymsg 'scratchpad show'",
+            "on-click-right": "swaymsg 'move scratchpad'"
+        }
     },
-	"custom/power": {
-		"format": " ",
-		"on-click": "wlogout"
-	},
-    "custom/scratchpad-indicator": {
-        "format-text": "{}hi",
-        "return-type": "json",
-        "interval": 3,
-        "exec": "~/.local/bin/scratchpad-indicator 2> /dev/null",
-        "exec-if": "exit 0",
-        "on-click": "swaymsg 'scratchpad show'",
-        "on-click-right": "swaymsg 'move scratchpad'"
+
+    {
+        "modules-left": ["sway/workspaces", "sway/mode"],
+        "modules-center": ["sway/window"],
+        "output": ["!HDMI-A-1", "*"],
+
+        "sway/window": {
+            "format": "{title}",
+        },
+
+        "sway/mode": {
+            "format": "<span style=\"italic\">{}</span>"
+        },
     }
-}
+]
