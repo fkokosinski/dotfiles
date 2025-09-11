@@ -3,11 +3,13 @@ set $mod        Mod4
 set $term       foot
 set $browser    firefox
 set $menu       fuzzel
+set $lock       swaylock
 
 # app shortcuts
 bindsym $mod+Return     exec $term
 bindsym $mod+b          exec $browser
 bindsym $mod+d          exec $menu
+bindsym $mod+Shift+q   exec $lock
 
 # kill focused tile
 bindsym $mod+q kill
