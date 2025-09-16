@@ -1,9 +1,9 @@
 * {
     border: none;
     font-family: Font Awesome, Roboto, Arial, sans-serif;
-    font-size: 13px;
+    font-size: 15px;
     color: #ffffff;
-    border-radius: 20px;
+    border-radius: 22px;
 }
 
 window {
@@ -32,6 +32,7 @@ window#waybar {
     padding: 1px 5px;
     background-color: transparent;
 }
+
 #workspaces button:hover {
     box-shadow: inherit;
 	background-color: rgba(0,153,153,1);
@@ -39,6 +40,10 @@ window#waybar {
 
 #workspaces button.focused {
 	background-color: rgba(0,43,51,0.85);
+}
+
+#workspaces button.urgent {
+  background-color: rgba(204, 36, 29, 1);
 }
 
 #clock,
