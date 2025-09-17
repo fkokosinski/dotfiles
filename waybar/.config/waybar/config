@@ -7,15 +7,15 @@
 
         "sway/window": {
             "format": "{title}",
+            "max-length": 50,
+            "rewrite": {
+                "(.*) — Mozilla Firefox": "Firefox [$1]"
+            }
         },
 
         "clock": {
             "format": " {:%e.%m.%Y   %H.%M}",
             "on-click": "firefox https://calendar.google.com",
-        },
-
-        "sway/mode": {
-            "format": "<span style=\"italic\">{}</span>"
         },
 
         "tray": {
@@ -50,10 +50,10 @@
 
         "sway/window": {
             "format": "{title}",
-        },
-
-        "sway/mode": {
-            "format": "<span style=\"italic\">{}</span>"
+            "max-length": 50,
+            "rewrite": {
+                "(.*) — Mozilla Firefox": "Firefox [$1]"
+            }
         },
     }
 ]
