@@ -25,13 +25,10 @@
 
         "pulseaudio": {
             "format": "{icon} {volume}%",
-            "format-bluetooth": "{volume}% {icon} {format_source}",
-            "format-bluetooth-muted": " {icon} {format_source}",
-            "format-muted": "0% {icon} ",
-            "format-source": "{volume}% ",
-            "format-source-muted": "",
+            "format-bluetooth": "{icon} {volume}%",
             "format-icons": {
                 "alsa_output.usb-Focusrite_Scarlett_4i4_4th_Gen_S4GAM0739043A2-00.analog-surround-51": "",
+                "headset": "",
                 "default": ["", "", ""]
             },
             "on-click": "pavucontrol"
