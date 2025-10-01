@@ -4,6 +4,7 @@ theme = "onedark"
 line-number = "relative"
 mouse = false
 cursorline = true
+color-modes = true
 
 [editor.statusline]
 left = ["mode", "spinner", "version-control", "file-name", "read-only-indicator", "file-modification-indicator"]
