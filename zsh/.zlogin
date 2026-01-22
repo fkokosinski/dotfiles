@@ -1,3 +1,4 @@
 if [ "$(tty)" = "/dev/tty1" ]; then
-    exec sway
+    udiskie &
+    exec sway --unsupported-gpu
 fi
