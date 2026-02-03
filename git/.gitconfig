@@ -1,0 +1,9 @@
+[init]
+	defaultBranch = main
+
+[user]
+	name = "Filip Kokosiński"
+	email = filip.kokosinski@gmail.com
+
+[includeIf "gitdir:~/Work/"]
+	path = .gitconfig-work
