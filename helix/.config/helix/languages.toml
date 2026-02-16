@@ -5,3 +5,4 @@ command = "ctags-lsp"
 name = "c"
 language-servers = [ "ctags-lsp" ]
 formatter = { command = "clang-format" }
+indent = { tab-width = 8, unit = '\t' }
