@@ -5,5 +5,11 @@
 	name = "Filip Kokosiński"
 	email = filip.kokosinski@gmail.com
 
+[sendemail]
+	smtpUser = filip.kokosinski@gmail.com
+	smtpServer = smtp.gmail.com
+	smtpServerPort = 587
+	smtpEncryption = tls
+
 [includeIf "gitdir:~/Work/"]
 	path = .gitconfig-work
