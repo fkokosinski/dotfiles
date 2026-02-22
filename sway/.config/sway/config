@@ -10,8 +10,11 @@ bindsym $mod+Return     exec $term
 bindsym $mod+b          exec $browser
 bindsym $mod+d          exec $menu
 bindsym $mod+Shift+q    exec $lock
-bindsym $mod+grave      exec 'wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle'
 bindsym Print           exec 'grim -g "$(slurp)" - | wl-copy'
+
+# global shortcut for push-to-talk: Wayland mod+` -> X11 R_CTRL
+bindsym           $mod+grave exec xdotool keydown Control_R
+bindsym --release $mod+grave exec xdotool keyup Control_R
 
 # kill focused tile
 bindsym $mod+q kill
