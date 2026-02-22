@@ -10,6 +10,7 @@ bindsym $mod+Return     exec $term
 bindsym $mod+b          exec $browser
 bindsym $mod+d          exec $menu
 bindsym $mod+Shift+q    exec $lock
+bindsym $mod+grave      exec 'wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle'
 bindsym Print           exec 'grim -g "$(slurp)" - | wl-copy'
 
 # kill focused tile
