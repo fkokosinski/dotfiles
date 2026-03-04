@@ -5,4 +5,22 @@ command = "ctags-lsp"
 name = "c"
 language-servers = [ "ctags-lsp" ]
 formatter = { command = "clang-format" }
-indent = { tab-width = 8, unit = '\t' }
+indent = { tab-width = 8, unit = "\t" }
+
+[[language]]
+name = "cpp"
+language-servers = [ "ctags-lsp" ]
+
+[[language]]
+name = "repl"
+scope = "source.repl"
+file-types = [ "repl" ]
+indent = { tab-width = 4, unit = " " }
+comment-tokens = "//"
+
+[[language]]
+name = "resc"
+scope = "source.resc"
+file-types = [ "resc" ]
+indent = { tab-width = 4, unit = " " }
+comment-tokens = "#"
