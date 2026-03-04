@@ -13,8 +13,8 @@ bindsym $mod+Shift+q    exec $lock
 bindsym Print           exec 'grim -g "$(slurp)" - | wl-copy'
 
 # global shortcut for push-to-talk: Wayland mod+` -> X11 R_CTRL
-bindsym           $mod+grave exec xdotool keydown Control_R
-bindsym --release $mod+grave exec xdotool keyup Control_R
+bindsym           $mod+grave exec xdotool keydown grave
+bindsym --release $mod+grave exec xdotool keyup grave
 
 # kill focused tile
 bindsym $mod+q kill
